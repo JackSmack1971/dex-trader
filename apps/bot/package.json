@@ -1,0 +1,6 @@
+{
+  "name": "@base-safe/bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@base-safe/reviewer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "viem": "2.57.5"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "test:compile": "tsc -b tsconfig.test.json",
+    "test": "npm run test:compile && node --test dist-test/test/decoder/*.test.js dist-test/test/chain/*.test.js"
+  }
+}

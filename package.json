@@ -1,0 +1,24 @@
+{
+  "name": "dex-trader-s1",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.19.1",
+  "engines": {
+    "node": ">=24 <25",
+    "npm": "11.19.1"
+  },
+  "workspaces": [
+    "packages/protocol",
+    "apps/bot",
+    "apps/reviewer"
+  ],
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "typescript": "7.0.2"
+  },
+  "scripts": {
+    "clean": "tsc -b --clean",
+    "build": "tsc -b tsconfig.json",
+    "test": "node scripts/check-workspace-boundaries.mjs && node --test scripts/check-workspace-boundaries.test.mjs && npm run test --workspaces --if-present"
+  }
+}
